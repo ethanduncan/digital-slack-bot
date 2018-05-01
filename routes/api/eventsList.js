@@ -44,6 +44,8 @@ function getList() {
     });
 }
 
-router.get('/events', (req, res) => res.send('resp'))
+router.get('/events', function(req,res) {
+    res.json({message: getList() })
+});
 
 module.exports = router;
